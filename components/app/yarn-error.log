@@ -1,0 +1,32 @@
+Arguments: 
+  /Users/jmaiz/.nvm/versions/node/v14.15.4/bin/node /Users/jmaiz/.nvm/versions/node/v14.15.4/bin/yarn add react
+
+PATH: 
+  /Users/jmaiz/bin:/Users/jmaiz/go/bin:/Users/jmaiz/.poetry/bin:/usr/local/Cellar/pyenv-virtualenv/1.1.5/shims:/Users/jmaiz/.pyenv/shims:/Users/jmaiz/.nvm/versions/node/v14.15.4/bin:/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin:/Library/Apple/usr/bin
+
+Yarn version: 
+  1.22.10
+
+Node version: 
+  14.15.4
+
+Platform: 
+  darwin x64
+
+Trace: 
+  Error: connect ECONNREFUSED 10.173.29.29:443
+      at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1146:16)
+
+npm manifest: 
+  {
+    "name": "like-button",
+    "version": "1.0.0",
+    "main": "index.js",
+    "license": "MIT"
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
