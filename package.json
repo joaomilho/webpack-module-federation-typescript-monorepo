@@ -6,6 +6,12 @@
   "private": true,
   "workspaces": [
     "components/*",
-    "types"
-  ]
+    "types",
+    "app"
+  ],
+  "scripts": {
+    "start:like-button": "cd components/like-button && yarn start",
+    "start:app": "cd app && yarn start",
+    "start": "yarn start:like-button & yarn start:app"
+  }
 }
