@@ -1,0 +1,6 @@
+{
+  "name": "shell",
+  "exposes": {
+    "./Shell": "./Shell"
+  }
+}

@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import type { LikeButtonProps } from "@wf/types";
 
-export const LikeButton = (props: LikeButtonProps) => {
+type LikeButtonProps = { a: 1 };
+
+export default function LikeButton(props: LikeButtonProps) {
   const [likes, setLikes] = useState(0);
 
   const handleClick = () => {
@@ -16,6 +17,4 @@ export const LikeButton = (props: LikeButtonProps) => {
       <span>{`React version - ${React.version}`}</span>
     </div>
   );
-};
-
-export default LikeButton;
+}

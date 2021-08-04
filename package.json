@@ -10,8 +10,13 @@
     "app"
   ],
   "scripts": {
+    "gen:types": "make-federated-types --outputDir ../foo",
     "start:like-button": "cd components/like-button && yarn start",
     "start:app": "cd app && yarn start",
-    "start": "yarn start:like-button & yarn start:app"
+    "start:shell": "cd components/shell && yarn start",
+    "start": "yarn start:like-button & yarn start:shell & yarn start:app"
+  },
+  "dependencies": {
+    "@pixability-ui/federated-types": "^0.1.0"
   }
 }
