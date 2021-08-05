@@ -1,5 +1,7 @@
 import React from "react";
 
-export const Shell = () => {
-  return <div>Just a shell</div>;
+export type ShellProps = { b: 2 };
+
+export const Shell = (props: ShellProps) => {
+  return <div>Just a shell {JSON.stringify(props)}</div>;
 };

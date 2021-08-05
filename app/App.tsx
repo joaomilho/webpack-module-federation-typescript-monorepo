@@ -1,16 +1,16 @@
 import React, { Suspense, lazy, ComponentType } from "react";
-import { LikeButtonProps } from "@wf/types";
 
-const LikeButton = lazy<ComponentType<LikeButtonProps>>(
-  () => import("like_button/LikeButton")
+const LikeButton = lazy(() => import("like_button/LikeButton"));
+const Shell = lazy(() =>
+  import("shell/Shell").then(({ Shell }) => ({ default: Shell }))
 );
-// const LikeButton = lazy(() => );
 
 export const App = () => {
   return (
     <div>
       Just an app
       <Suspense fallback={"..."}>
+        <Shell b={2} />
         <LikeButton a={1} />
       </Suspense>
     </div>

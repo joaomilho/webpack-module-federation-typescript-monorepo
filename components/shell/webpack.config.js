@@ -1,5 +1,7 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPlugin");
+const federationConfig = require("./federation.config.json");
 
 module.exports = {
   entry: "./index",
@@ -26,6 +28,16 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: "./public/index.html",
+    }),
+
+    new ModuleFederationPlugin({
+      ...federationConfig,
+      remoteType: "var",
+      filename: "remoteEntry.js",
+      shared: {
+        react: { singleton: true },
+        "react-dom": { singleton: true },
+      },
     }),
   ],
 };

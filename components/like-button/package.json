@@ -4,14 +4,14 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "webpack serve"
+    "start": "webpack serve",
+    "gen:types": "make-federated-types --outputDir ../../foo"
   },
   "dependencies": {
     "@types/react-dom": "^17.0.9",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "typescript": "^4.3.5",
-    "@wf/types": "*"
+    "typescript": "^4.3.5"
   },
   "devDependencies": {
     "@types/node": "^16.4.12",

@@ -1,0 +1,6 @@
+{
+  "name": "like_button",
+  "exposes": {
+    "./LikeButton": "./LikeButton"
+  }
+}

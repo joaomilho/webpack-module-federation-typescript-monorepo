@@ -27,10 +27,12 @@ module.exports = {
   plugins: [
     new ModuleFederationPlugin({
       name: "app",
-      filename: "remoteEntry.js",
+
       remotes: {
         like_button: "like_button@http://localhost:3001/remoteEntry.js",
+        shell: "shell@http://localhost:3002/remoteEntry.js",
       },
+      filename: "remoteEntry.js",
       shared: {
         react: { singleton: true },
         "react-dom": { singleton: true },

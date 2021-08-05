@@ -1,6 +1,7 @@
 const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPlugin");
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const federationConfig = require("./federation.config.json");
 
 module.exports = {
   entry: "./index",
@@ -30,11 +31,8 @@ module.exports = {
     }),
 
     new ModuleFederationPlugin({
-      name: "like_button",
+      ...federationConfig,
       filename: "remoteEntry.js",
-      exposes: {
-        "./LikeButton": "./LikeButton",
-      },
       shared: {
         react: { singleton: true },
         "react-dom": { singleton: true },
